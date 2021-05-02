@@ -27,49 +27,53 @@ export const portfolioData = [
     {
         name: "Yritys Hyvä 2019-winner", 
         org: "Winner of the nationwide entrepreneurship competition",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/YritysHyvä.png"
     },
     {
         name: "Android App Development", 
         org: "In total almost half a million downloads",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/AppDev.png"
     },
     {
         name: "Website for Car Repair Shop", 
         org: "Easily managed WordPress site for local car repair shop",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/sammonlahdenak.com.png"
     },
     {
         name: "Matikkaeditori.fi", 
-        org: "Popular online math editor",
-        description: "Jotain kuvausta tähä",
+        org: "Popular online mathematics editor",
         image: "portfolio/Matikkaeditori.fi.png"
     },
+    /*
     {
         name: "OpenWilma", 
         org: "Open-source libraries for interacting with Wilma APIs",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/OpenWilma.png"
     },
+    */
     {
         name: "10K+ Followers on TikTok", 
         org: "Achieved popularity on TikTok while advertising my mobile apps",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/TikTok.png"
     },
     {
         name: "WebKorjaamo", 
         org: "Customer and work management system for repair shop businesses",
-        description: "Jotain kuvausta tähä",
         image: "portfolio/WebKorjaamo.png"
     },
     {
         name: "Gaming Club for Children", 
-        org: "In 2019, me with couple other partners founded a local gaming club.",
-        description: "Jotain kuvausta tähä",
+        org: "Me with couple other partners founded a local gaming club in 2019",
         image: "portfolio/Club.jpg"
+    },
+    {
+        name: "ical-ruokalista", 
+        org: "Transform school lunch menus into iCalendar format",
+        image: "portfolio/ruokalista.png"
+    },
+    {
+        name: "Keissi.fi", 
+        org: "Free online service for publishing photo albums",
+        image: "portfolio/keissifi.png"
     }
 ];
