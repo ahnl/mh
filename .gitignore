@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+
+.cert/
+
+old/
+
 # testing
 /coverage
 

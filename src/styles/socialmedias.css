@@ -1,0 +1,30 @@
+ul.socialMedias {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    pointer-events: auto; 
+}
+
+ul.socialMedias li a {
+    display: inline-block;
+}
+
+ul.socialMedias:hover li {
+    opacity: 0.2;
+}
+
+ul.socialMedias li:hover {
+    opacity: 0.85 !important;
+}
+
+ul.socialMedias li {
+    display: inline-block;
+    transition: opacity 0.1s ease-out;
+    margin-left: 1em;
+}
+
+ul.socialMedias img {
+    width: 2em;
+    height: 2em;
+    opacity: 0.85;
+}

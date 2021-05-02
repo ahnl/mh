@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import { Spline } from 'react-spline';
+import SPLINE_EXPORTED_SCENE from './scene.json';
+import { Portfolio } from './components/Portfolio';
+import { Header } from './components/Header';
+import { portfolioData } from './data';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div>
+                <Spline className="art" scene={SPLINE_EXPORTED_SCENE} />
+            </div>
+            <div className="content">
+                <Header />
+                <Portfolio data={portfolioData} />
+            </div>
+        </div>
+    );
 }
+
+
 
 export default App;
