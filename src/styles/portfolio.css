@@ -53,6 +53,7 @@
     display: block;
     text-decoration: none;
     font-family: 'Noto Sans', sans-serif;
+    opacity: 0.9;
 }
 
 .itemContent .itemDescription {
@@ -132,10 +133,11 @@ a[href] .itemContent h2::after {
         grid-column: 1 / 2;
         aspect-ratio: unset;
         height: 200px; /* to-do: try to do this without setting height 💩*/
+        margin-bottom: 0.5rem;
     }
     .itemInner {
         margin: 0;
-        padding: 1.5rem;
+        padding: 2rem;
         font-size: 1em;
     }
     .background {

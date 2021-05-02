@@ -3,6 +3,7 @@ ul.socialMedias {
     margin: 0;
     padding: 0;
     pointer-events: auto; 
+    opacity: 0.9;
 }
 
 ul.socialMedias li a {
@@ -33,7 +34,14 @@ ul.socialMedias img {
 @media only screen and (max-width: 640px) {
     ul.socialMedias {
         position: absolute;
-        top: 4vw;
+        top: 1rem;
         left: 0vw;
     }
+}
+
+.centerText .socialMedias {
+    margin-top: 2rem;
+    display: inline-block;
+    position: unset;
+    opacity: 1;
 }

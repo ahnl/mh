@@ -32,6 +32,17 @@
     margin-top: 500px;
 }
 
+.centerText {
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 5rem 0;
+    font-family: 'Lexend Mega', sans-serif;
+    letter-spacing: -2px;
+    font-size: 1.1em;
+}
+
 @media only screen and (max-width: 640px) {
     .art {
         top: 0;
@@ -51,7 +62,7 @@
 
     .content {
         /* it looks cool when the portfolio is peeking a little bit in the first 100vh on the mobile */
-        margin-top: 50vh;
+        margin-top: 55vh;
     }
 }
 

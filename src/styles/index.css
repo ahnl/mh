@@ -22,5 +22,5 @@ code {
 */
 
 @media only screen and (max-width: 640px) {
-    body { margin: 2vw; }
+    body { margin: 1rem; }
 }

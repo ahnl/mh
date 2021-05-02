@@ -15,12 +15,12 @@ export const portfolioData = [
     },
     {
         name: "Hack4OpenGLAM Dashboard",
-        org: "Creative Commons, Global Summit 2020",
+        org: "Data visualizer made for Creative Commons, Global Summit 2020",
         image: "portfolio/Hack4OpenGLAM.png"
     },
     {
         name: "QR-pyörä",
-        org: "Public Art Installation",
+        org: "Public art installation",
         image: "portfolio/QR-pyörä.png",
         "additional": ["Etelä-Saimaa.svg"]
     },
@@ -38,7 +38,7 @@ export const portfolioData = [
     },
     {
         name: "Website for Car Repair Shop", 
-        org: "Sammonlahden Autokorjaamo Oy",
+        org: "Easily managed WordPress site for local car repair shop",
         description: "Jotain kuvausta tähä",
         image: "portfolio/sammonlahdenak.com.png"
     },
@@ -59,5 +59,17 @@ export const portfolioData = [
         org: "Achieved popularity on TikTok while advertising my mobile apps",
         description: "Jotain kuvausta tähä",
         image: "portfolio/TikTok.png"
+    },
+    {
+        name: "WebKorjaamo", 
+        org: "Customer and work management system for repair shop businesses",
+        description: "Jotain kuvausta tähä",
+        image: "portfolio/WebKorjaamo.png"
+    },
+    {
+        name: "Gaming Club for Children", 
+        org: "In 2019, me with couple other partners founded a local gaming club.",
+        description: "Jotain kuvausta tähä",
+        image: "portfolio/Club.jpg"
     }
 ];

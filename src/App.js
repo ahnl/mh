@@ -4,6 +4,7 @@ import SPLINE_EXPORTED_SCENE from './scene.json';
 import { Portfolio } from './components/Portfolio';
 import { Header } from './components/Header';
 import { portfolioData } from './data';
+import { SocialMedias } from './components/SocialMedias';
 
 function App() {
     return (
@@ -15,6 +16,10 @@ function App() {
             <div className="content">
                 <Header />
                 <Portfolio data={portfolioData} />
+                <div className="centerText">
+                    Contact me for my CV with my work history. References upon a request.
+                    <br /><SocialMedias />
+                </div>
             </div>
         </div>
     );
