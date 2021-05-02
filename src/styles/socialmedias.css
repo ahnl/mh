@@ -28,3 +28,12 @@ ul.socialMedias img {
     height: 2em;
     opacity: 0.85;
 }
+
+
+@media only screen and (max-width: 640px) {
+    ul.socialMedias {
+        position: absolute;
+        top: 4vw;
+        left: 0vw;
+    }
+}

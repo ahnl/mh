@@ -10,6 +10,7 @@ function App() {
         <div className="App">
             <div>
                 <Spline className="art" scene={SPLINE_EXPORTED_SCENE} />
+                <div className="artBottomSafeZone"></div>
             </div>
             <div className="content">
                 <Header />
