@@ -17,7 +17,7 @@ function App() {
                 <Header />
                 <Portfolio data={portfolioData} />
                 <div className="centerText">
-                    You may contact me for my full CV, with a more detailed work history. References upon a request.
+                    You may contact me for my full CV, with a more detailed work history. References available upon request.
                     <br /><SocialMedias />
                 </div>
             </div>
