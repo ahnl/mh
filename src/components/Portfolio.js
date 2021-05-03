@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import '../styles/portfolio.css';
 
 const images = require.context('../images', true);
@@ -19,6 +19,35 @@ function PortfolioAdditional({additional}) {
         return <></>; 
     }
 }
+
+function Video({image, video}) {
+    const refVideo = useRef(null);
+    useEffect(() => {
+        if (!refVideo.current) {
+            return;
+        }
+
+        refVideo.current.defaultMuted = true;
+        refVideo.current.muted = true;
+
+        refVideo.current.children[0].setAttribute("src", video);
+        refVideo.current.play();
+    }, [video]);
+
+    return (
+        <video
+            ref={refVideo}
+            poster={image}
+            className="itemBackground" id="bg1"
+            loop
+            autoPlay
+            playsInline 
+        >
+            <source type="video/mp4" />
+        </video>
+    )
+}
+
 function PortfolioBackground({data}) {
     const image = images('./' + data.image).default;
 
@@ -40,9 +69,7 @@ function PortfolioBackground({data}) {
         const video = images('./' + data.video).default;
 
         return (
-            <video poster={image} autoPlay={true} muted={true} loop={true} playsInline={true} className="itemBackground" id="bg1">
-                <source src={video} type="video/mp4" />
-            </video>
+            <Video video={video} image={image} />
         )
     } else {
         return (
