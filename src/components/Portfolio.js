@@ -40,7 +40,7 @@ function PortfolioBackground({data}) {
         const video = images('./' + data.video).default;
 
         return (
-            <video poster={image} autoPlay={true} loop={true} playsInline={true} className="itemBackground" id="bg1">
+            <video poster={image} autoPlay={true} muted={true} loop={true} playsInline={true} className="itemBackground" id="bg1">
                 <source src={video} type="video/mp4" />
             </video>
         )
