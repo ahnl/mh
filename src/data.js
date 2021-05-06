@@ -68,7 +68,7 @@ export const portfolioData = [
     },
     {
         name: "Abitti Security Vulnerability 2021", 
-        org: "Responsible disclosure for severe security vulnerability found in the exam system developed by the Matriculation Examination Board (YTL)",
+        org: "Responsible disclosure for severe security vulnerability found in the exam system developed by the YTL",
         url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
         image: "portfolio/YTL.png"
     },
