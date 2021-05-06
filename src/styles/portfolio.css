@@ -133,7 +133,7 @@ a[href] .itemContent h2::after {
     }
     .portfolioGrid .item {
         grid-column: 1 / 2;
-        aspect-ratio: unset;
+        aspect-ratio: unset !important;
         height: 200px; /* to-do: try to do this without setting height 💩*/
         margin-bottom: 0.5rem;
     }
