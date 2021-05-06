@@ -67,6 +67,12 @@ export const portfolioData = [
         image: "portfolio/Club.jpg"
     },
     {
+        name: "Abitti Security Vulnerability 2021", 
+        org: "Responsible disclosure for severe security vulnerability found in the exam system developed by the Matriculation Examination Board (YTL)",
+        url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
+        image: "portfolio/YTL.png"
+    },
+    {
         name: "ical-ruokalista", 
         org: "Transform school lunch menus into iCalendar format",
         image: "portfolio/ruokalista.png"
