@@ -4,7 +4,8 @@ export const portfolioData = [
     {
         name: "Covid-19.fi",
         org: "Covid-19 statistics for Finland",
-        image: "portfolio/covid-19.fi.png"
+        image: "portfolio/covid-19.fi.png",
+        url: "https://covid-19.fi"
     },
     {
         name: "Green City Block", 
@@ -22,7 +23,8 @@ export const portfolioData = [
         name: "QR-pyörä",
         org: "Public art installation",
         image: "portfolio/QR-pyörä.png",
-        "additional": ["Etelä-Saimaa.svg"]
+        additional: ["Etelä-Saimaa.svg"],
+        url: "https://qrpyora.fi"
     },
     {
         name: "Yritys Hyvä 2019-winner", 
@@ -42,7 +44,8 @@ export const portfolioData = [
     {
         name: "Matikkaeditori.fi", 
         org: "Popular online mathematics editor",
-        image: "portfolio/Matikkaeditori.fi.png"
+        image: "portfolio/Matikkaeditori.fi.png",
+        url: "https://matikkaeditori.fi"
     },
     /*
     {
@@ -80,6 +83,7 @@ export const portfolioData = [
     {
         name: "Keissi.fi", 
         org: "Free online service for publishing photo albums",
-        image: "portfolio/keissifi.png"
+        image: "portfolio/keissifi.png",
+        url: "https://keissi.fi/"
     }
 ];

@@ -1,6 +1,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import '../styles/portfolio.css';
 
+const linksEnabled = false; /* I prefer it disabled for now */
 const images = require.context('../images', true);
 
 function PortfolioAdditional({additional}) {
@@ -78,8 +79,8 @@ function PortfolioBackground({data}) {
     }
 }
 function PortfolioItem({data}) {
-    return (
-        <div className="item">
+    const Item = () => (
+        <>
             <PortfolioBackground data={{
                 image: data.image, 
                 video: data.video
@@ -92,8 +93,17 @@ function PortfolioItem({data}) {
                 </div>
                 <PortfolioAdditional additional={data.additional}/>
             </div>
+        </>
+    );
+    return (data.url && linksEnabled ? 
+        <a href={data.url} className="item" target="_blank" rel="noreferrer">
+            <Item />
+        </a>
+    : 
+        <div className="item">
+            <Item />
         </div>
-    )
+    );
 }
 export function Portfolio({data}) {
     return (

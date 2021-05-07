@@ -109,19 +109,21 @@ video.itemBackground {
     margin-top: 1rem;
 }
 
-/*
+a[href] .itemDescription {
+    text-decoration: none;
+}
 a[href] .itemContent h2::after {
     content: ' ';
-    background-image: url(assets/tab.svg);
-    width: 16px;
-    height: 16px;
+    background-image: url(../images/tab.svg);
+    width: 20px;
+    height: 20px;
     display: inline-block;
     background-size: 100% 100%;
     opacity: 0.9;
     margin-left: 0.5em;
-    filter: var(--icon-filter);
+    filter: invert(1);
 }
-*/
+
 
 
 
