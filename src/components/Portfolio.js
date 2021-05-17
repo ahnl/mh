@@ -4,14 +4,16 @@ import '../styles/portfolio.css';
 const linksEnabled = false; /* I prefer it disabled for now */
 const images = require.context('../images', true);
 
-function PortfolioAdditional({additional}) {
-    if (additional) {
+function PortfolioMedias({data}) {
+    if (data) {
         return (
             <div>
-                {additional.map(item => {
-                    const image = images('./' + item).default;
+                {data.map(item => {
+                    const image = images('./' + item.logo).default;
                     return (
-                        <img className="mediaLogo" src={image} alt={item} key={item} />
+                        <a className="mediaLogo" href={item.url} target="_blank" key={item.url} rel="noreferrer">
+                            <img src={image} alt={item.name} />
+                        </a>
                     )
                 })}
             </div>
@@ -91,7 +93,7 @@ function PortfolioItem({data}) {
                     <h2>{data.name}</h2>
                     <span className="itemDescription">{data.org}</span>
                 </div>
-                <PortfolioAdditional additional={data.additional}/>
+                <PortfolioMedias data={data.media}/>
             </div>
         </>
     );

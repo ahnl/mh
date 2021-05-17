@@ -12,7 +12,18 @@ export const portfolioData = [
         org: "Responsible disclosure for severe security vulnerabilities found in the exam system developed by the YTL",
         url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
         image: "portfolio/YTL.png",
-        additional: ["Helsingin-Sanomat.svg", "tivi.png"],
+        media: [
+            {
+                name: "Helsingin Sanomat",
+                logo: "Helsingin-Sanomat.svg",
+                url: "https://www.hs.fi/kotimaa/art-2000007980520.html"
+            },
+            {
+                name: "Tivi",
+                logo: "tivi.png",
+                url: "https://www.tivi.fi/uutiset/hs-lukiolaiset-loysivat-ammottavia-aukkoja-yo-kokeiden-abitti-jarjestelmasta/f07a4571-3a7f-4ebd-a399-a73e12ba3c01"
+            }
+        ]
     },
     {
         name: "Hack4OpenGLAM Dashboard",
@@ -23,7 +34,13 @@ export const portfolioData = [
         name: "QR-pyörä",
         org: "Public art installation",
         image: "portfolio/QR-pyörä.png",
-        additional: ["Etelä-Saimaa.svg"],
+        media: [
+            {
+                name: "Etelä-Saimaa",
+                logo: "Etelä-Saimaa.svg",
+                url: "https://www.esaimaa.fi/paikalliset/4000671"
+            }
+        ],
         url: "https://qrpyora.fi"
     },
     {

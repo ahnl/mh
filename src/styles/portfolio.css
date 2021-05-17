@@ -92,7 +92,7 @@
     background-size: cover;
     background-position: center;
     /* maybe even background-attachment: fixed; ? */
-    z-index: -10;
+    z-index: 0;
     filter: contrast(0.6) brightness(0.4) saturate(1.3) grayscale(0.3);
 }
 
@@ -103,10 +103,15 @@ video.itemBackground {
 }
 
 
-.mediaLogo {
+.mediaLogo img {
     opacity: 0.7;
     height: 1em;
     margin-top: 1rem;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.mediaLogo:hover img {
+    opacity: 1;
 }
 
 .mediaLogo:not(:last-child) {
