@@ -8,11 +8,11 @@ export const portfolioData = [
         url: "https://covid-19.fi"
     },
     {
-        name: "Green City Block", 
-        org: "Erasmus+ My Town 2020",
-        description: "For my Erasmus+ school project, I modelled a city block in my home city and made it greener for the future. I used SketchUp for 3D-modelling and TwinMotion for rendering a pretty looking video.\n\nThe project won the nationwide science competition in 2020.",
-        image: "portfolio/GreenCityBlock.png",
-        "video": "portfolio/GreenCityBlock.mp4"
+        name: "Abitti Security Vulnerability 2021", 
+        org: "Responsible disclosure for severe security vulnerabilities found in the exam system developed by the YTL",
+        url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
+        image: "portfolio/YTL.png",
+        additional: ["Helsingin-Sanomat.svg"],
     },
     {
         name: "Hack4OpenGLAM Dashboard",
@@ -70,10 +70,11 @@ export const portfolioData = [
         image: "portfolio/Club.jpg"
     },
     {
-        name: "Abitti Security Vulnerability 2021", 
-        org: "Responsible disclosure for severe security vulnerabilities found in the exam system developed by the YTL",
-        url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
-        image: "portfolio/YTL.png"
+        name: "Green City Block", 
+        org: "Erasmus+ My Town 2020",
+        description: "For my Erasmus+ school project, I modelled a city block in my home city and made it greener for the future. I used SketchUp for 3D-modelling and TwinMotion for rendering a pretty looking video.\n\nThe project won the nationwide science competition in 2020.",
+        image: "portfolio/GreenCityBlock.png",
+        "video": "portfolio/GreenCityBlock.mp4"
     },
     {
         name: "ical-ruokalista", 
