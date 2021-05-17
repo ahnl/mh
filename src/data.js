@@ -12,7 +12,7 @@ export const portfolioData = [
         org: "Responsible disclosure for severe security vulnerabilities found in the exam system developed by the YTL",
         url: "https://www.abitti.fi/blogi/2021/05/abitista-on-korjattu-kaksi-tietoturvahaavoittuvuutta/",
         image: "portfolio/YTL.png",
-        additional: ["Helsingin-Sanomat.svg"],
+        additional: ["Helsingin-Sanomat.svg", "tivi.png"],
     },
     {
         name: "Hack4OpenGLAM Dashboard",
