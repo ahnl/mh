@@ -109,6 +109,10 @@ video.itemBackground {
     margin-top: 1rem;
 }
 
+.mediaLogo:not(:last-child) {
+    margin-right: 1em;
+}
+
 a[href] .itemDescription {
     text-decoration: none;
 }
