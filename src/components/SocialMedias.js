@@ -6,9 +6,16 @@ import 'tippy.js/dist/tippy.css';
 import InstagramIcon from '../images/icons/instagram.svg';
 import SnapchatIcon from '../images/icons/snapchat.svg';
 import LinkedinIcon from '../images/icons/linkedin.svg';
+import GitHubIcon from '../images/icons/github.svg';
 import EmailIcon from '../images/icons/email.svg';
 
 const socialMediaData = [
+    {
+        name: "GitHub",
+        icon: GitHubIcon,
+        handle: "@ahnl",
+        url: "https://github.com/ahnl"
+    },
     {
         name: "Instagram",
         icon: InstagramIcon,
