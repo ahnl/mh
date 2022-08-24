@@ -1,7 +1,12 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react';
 import '../styles/portfolio.css';
+import { tagNamings } from '../tags';
 
-const linksEnabled = false; /* I prefer it disabled for now */
+import filterIcon from '../images/icons/filter.svg';
+import sortIcon from '../images/icons/sort.svg';
+import clearIcon from '../images/icons/clear.svg';
+
+const linksEnabled = true; /* I prefer it disabled for now */
 const images = require.context('../images', true);
 
 function PortfolioMedias({data}) {
@@ -34,7 +39,7 @@ function Video({image, video}) {
         refVideo.current.muted = true;
 
         refVideo.current.children[0].setAttribute("src", video);
-        refVideo.current.play();
+        refVideo.current.play().catch(() => {});
     }, [video]);
 
     return (
@@ -55,7 +60,11 @@ function PortfolioBackground({data}) {
     const image = images('./' + data.image).default;
 
     const play = useCallback(() => {
-        document.querySelector("video[poster='" + image + "']").play();
+        try {
+            document.querySelector("video[poster='" + image + "']").play();
+        } catch (e) {
+            console.log("Cannot play video")
+        }
     }, [image]);
 
     useEffect(() => {
@@ -81,6 +90,9 @@ function PortfolioBackground({data}) {
     }
 }
 function PortfolioItem({data}) {
+    //const  = data.larger ? { gridColumn: "auto / span 2" } : {}
+    const itemClasses = `item ${data.larger ? "larger" : ""}`
+
     const Item = () => (
         <>
             <PortfolioBackground data={{
@@ -98,21 +110,72 @@ function PortfolioItem({data}) {
         </>
     );
     return (data.url && linksEnabled ? 
-        <a href={data.url} className="item" target="_blank" rel="noreferrer">
+        <a href={data.url} className={itemClasses} target="_blank" rel="noreferrer" >
             <Item />
         </a>
     : 
-        <div className="item">
+        <div className={itemClasses}>
             <Item />
         </div>
     );
 }
-export function Portfolio({data}) {
+
+function PortfolioFilter({tags, setFilter, filter, setNewestSort, newestSort}) {
     return (
-        <div className="portfolioGrid">
-            {data.map((item) => (
-                <PortfolioItem key={item.name} data={item} />
-            ))}
+        <div className="portfolioFilters">
+            <div>
+                <div className="label">
+                    <img src={filterIcon} alt="Filter by" />
+                </div>
+                <ul className="tags">
+                    {tags.map(tag => (
+                        <li className={filter.includes(tag) ? "active" : ""} key={tag} onClick={() => filter.includes(tag) ? setFilter([]) : setFilter([tag])}>{tagNamings[tag]}</li>
+                    ))}
+                </ul>
+                <div className="label">
+                    <img src={sortIcon} alt="Sort by" />
+                </div>
+                <ul className="tags">
+                    <li onClick={() => setNewestSort(!newestSort)} className={newestSort ? "active" : ""}>Latest</li>
+                </ul>     
+            </div>
+            <div>
+                {filter.length > 0 || newestSort ? 
+                <button onClick={() => {
+                    setFilter([])
+                    setNewestSort(false)
+                }}>
+                    <img src={clearIcon} alt="Clear items" />
+                    <span>Clear filters</span>
+                </button>
+                : null } 
+            </div>
         </div>
+    )
+}
+export function Portfolio({data}) {
+    const [filter, setFilter] = useState([])
+    const [newestSort, setNewestSort] = useState(false)
+
+    const d = !newestSort ? data : [...data].sort((a, b) => (b.weigth - a.weigth))
+    console.log(d)
+    return (
+        <>
+            <PortfolioFilter 
+                tags={["projects", "achievements"]}
+                filter={filter}
+                setFilter={setFilter} 
+                newestSort={newestSort}
+                setNewestSort={setNewestSort} />
+            <div className="portfolioGrid">
+                {d.map((item) => {
+                    if (!item.tags.some(tag => filter.includes(tag)) && filter.length !== 0) return null
+
+                    return (
+                        <PortfolioItem key={item.name} data={item} />
+                    )
+                })}
+            </div>
+        </>
     )
 }

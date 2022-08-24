@@ -34,8 +34,8 @@ ul.socialMedias img {
 @media only screen and (max-width: 640px) {
     ul.socialMedias {
         position: absolute;
-        top: 1rem;
-        left: 0vw;
+        top: 1.3rem;
+        left: 1vw;
     }
 }
 
