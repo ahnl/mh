@@ -110,6 +110,15 @@ export const portfolioData = [
         tags: ["achievements"],
         weigth: 90
     },
+    
+    {
+        weigth: 150,
+        name: "Sustainable Marketing in India",
+        org: "As part of my international studies, our group travelled to India in 2022 to present a strategy for the Indian market to tackle climate change.",
+        tags: ["projects"],
+        image: "portfolio/intia.jpg",
+        larger: true
+    },
     {
         name: "WebKorjaamo", 
         org: "Customer and work management system for repair shop businesses",
